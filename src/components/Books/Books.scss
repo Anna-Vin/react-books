@@ -1,0 +1,67 @@
+@import '../../scss/mixins/mixins.scss';
+
+.books {
+  text-align: center;
+
+  h1 {
+    padding: 20px;
+  }
+
+
+  &__inner {
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+ 
+
+    .book-card {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      width: 100%;
+      margin: 10px;
+      padding: 30px 15px;
+      text-align: center;
+      background: white;
+      border: 1px solid #e9e9e9;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      @include screen(md) {
+        width: 40%;
+      }
+
+      @include screen(lg) {
+        width: 30%;
+      }
+
+      @include screen(xl) {
+        width: 20%;
+      }
+      
+
+      img {
+        width: 120px;
+        margin-bottom: 20px;
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.fav {
+  padding-top: 90px;
+  text-align: center;
+}
+
+.fav-book {
+  border: 1px solid red;
+}
